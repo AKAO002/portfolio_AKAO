@@ -12,6 +12,17 @@
   --foreground: var(--color-text);
 }
 
+.dark {
+  --color-base: #0f172a;
+  --color-main: #60a5fa;
+  --color-sub: #14b8a6;
+  --color-sub-strong: #5eead4;
+  --color-accent: #fbbf24;
+  --color-text: #e2e8f0;
+  --background: var(--color-base);
+  --foreground: var(--color-text);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -23,4 +34,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition:
+    background-color 240ms ease,
+    color 240ms ease;
 }
