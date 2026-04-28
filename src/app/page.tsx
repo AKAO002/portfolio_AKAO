@@ -4,12 +4,19 @@ import { SkillTag } from "@/components/SkillTag";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
-  const skills = [
-    "UI Design",
-    "Design System",
-    "Next.js",
-    "TypeScript",
-    "Tailwind CSS",
+  const skillGroups = [
+    {
+      category: "Frontend",
+      skills: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    },
+    {
+      category: "Design",
+      skills: ["UI Design", "Design System"],
+    },
+    {
+      category: "Tools / Workflow",
+      skills: ["Git/GitHub", "Vercel", "Accessibility", "Responsive Design"],
+    },
   ];
 
   return (
@@ -33,10 +40,19 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-6 pt-2 sm:gap-7">
-          <div className="flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <SkillTag key={skill} label={skill} />
+        <div className="flex flex-col gap-5 pt-1.5 sm:gap-6 sm:pt-2">
+          <div className="flex flex-col gap-4.5 sm:gap-5">
+            {skillGroups.map((group) => (
+              <div key={group.category} className="flex flex-col gap-2.5">
+                <p className="text-[13px] font-semibold uppercase tracking-[0.08em] text-[var(--color-main)]/85 dark:text-blue-300/90">
+                  {group.category}
+                </p>
+                <div className="flex flex-wrap gap-2.5 sm:gap-3">
+                  {group.skills.map((skill) => (
+                    <SkillTag key={`${group.category}-${skill}`} label={skill} />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
           <div>
