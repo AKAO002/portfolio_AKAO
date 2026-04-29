@@ -26,7 +26,8 @@ export default function Home() {
         "自己紹介・スキル・問い合わせ導線が一画面で自然につながる、ポートフォリオのファーストビューを設計・実装しました。",
       improvement:
         "余白リズムと配色比率（70:20:5:5）を調整し、読みやすさを維持したまま CTA までの視線導線を短くしました。",
-      impact: "初見でも「誰のサイトか」「何ができるか」が短時間で把握しやすい構成に改善。",
+      impact:
+        "初見でも「誰のサイトか」「何ができるか」が短時間で把握しやすい構成に改善。",
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
       githubLabel: "GitHub: 準備中",
     },
@@ -36,7 +37,8 @@ export default function Home() {
         "ヘッダー横から直感的に操作できる、ライト・ダークモード切り替えトグルを実装しました。",
       improvement:
         "マウント前の表示制御と初期テーマ反映を追加し、テーマ切替時のチラつきと表示ズレを抑えました。",
-      impact: "モード切替後も表示が安定し、明るさの好みに合わせて継続閲覧しやすい体験を実現。",
+      impact:
+        "モード切替後も表示が安定し、明るさの好みに合わせて継続閲覧しやすい体験を実現。",
       tech: ["Next.js", "React", "Tailwind CSS", "localStorage"],
       githubLabel: "GitHub: 準備中",
     },
@@ -46,7 +48,8 @@ export default function Home() {
         "スキルを Frontend / Design / Tools・Workflow の3カテゴリに整理し、強みの全体像が短時間で伝わる構成にしました。",
       improvement:
         "タグ数を適正化（8〜12）し、見出しの強さ・折り返し・間隔を調整してスマホでも読みやすさを維持しました。",
-      impact: "情報量を増やさずに比較しやすさを高め、採用担当が技術スタックを把握しやすい状態に改善。",
+      impact:
+        "情報量を増やさずに比較しやすさを高め、採用担当が技術スタックを把握しやすい状態に改善。",
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "Accessibility"],
       githubLabel: "GitHub: 準備中",
     },
@@ -82,7 +85,10 @@ export default function Home() {
                 </p>
                 <div className="flex flex-wrap gap-2.5 sm:gap-3">
                   {group.skills.map((skill) => (
-                    <SkillTag key={`${group.category}-${skill}`} label={skill} />
+                    <SkillTag
+                      key={`${group.category}-${skill}`}
+                      label={skill}
+                    />
                   ))}
                 </div>
               </div>

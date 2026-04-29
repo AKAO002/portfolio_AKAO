@@ -30,7 +30,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (typeof document === "undefined") {
       return "light";
     }
-    return document.documentElement.classList.contains("dark") ? "dark" : "light";
+    return document.documentElement.classList.contains("dark")
+      ? "dark"
+      : "light";
   });
   const setTheme = useCallback((nextTheme: Theme) => {
     setThemeState(nextTheme);
@@ -50,7 +52,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     [theme, setTheme, toggleTheme],
   );
 
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 }
 
 export function useTheme() {
