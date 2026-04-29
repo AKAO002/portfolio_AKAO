@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AKAO Portfolio
 
-## Getting Started
+AKAO のポートフォリオサイトです。  
+北欧モダンなトーンをベースに、プロフィール・スキル・実績・問い合わせ導線を掲載しています。
 
-First, run the development server:
+## Features
+
+- ライト / ダークモード切り替え
+- スキルのカテゴリ表示（Frontend / Design / Tools & Workflow）
+- 実績カード（概要 / 改善 / 成果）
+- Contact フォーム（フロント + `app/api/contact` の最小 API 連携）
+- 送信成功時の導線（Google フォームへの外部リンク）
+
+## Tech Stack
+
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS v4
+
+## Setup
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで `http://localhost:3000` を開いて確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`.env.local` に以下を設定してください。
 
-## Learn More
+```bash
+NEXT_PUBLIC_GOOGLE_FORM_URL=https://docs.google.com/forms/d/e/your-form-id/viewform
+```
 
-To learn more about Next.js, take a look at the following resources:
+- 未設定でもフォーム自体は動作します
+- 成功画面に Google フォームボタンを表示したい場合は設定が必要です
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run dev    # 開発サーバー
+npm run lint   # ESLint
+npm run build  # 本番ビルド
+```
 
-## Deploy on Vercel
+## Deploy (Vercel)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. GitHub に push
+2. Vercel でリポジトリを Import
+3. `NEXT_PUBLIC_GOOGLE_FORM_URL` を Vercel の Environment Variables に設定
+4. Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Live URL
+
+- Production: `TBD (after Vercel deploy)`
