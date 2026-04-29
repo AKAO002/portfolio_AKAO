@@ -29,7 +29,7 @@ export default function Home() {
       impact:
         "初見でも「誰のサイトか」「何ができるか」が短時間で把握しやすい構成に改善。",
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
-      githubLabel: "GitHub: 準備中",
+      githubLabel: "GitHub: 公開準備中",
     },
     {
       title: "Dark / Light Theme Toggle UI",
@@ -40,7 +40,7 @@ export default function Home() {
       impact:
         "モード切替後も表示が安定し、明るさの好みに合わせて継続閲覧しやすい体験を実現。",
       tech: ["Next.js", "React", "Tailwind CSS", "localStorage"],
-      githubLabel: "GitHub: 準備中",
+      githubLabel: "GitHub: 公開準備中",
     },
     {
       title: "Skill Information Architecture",
@@ -51,7 +51,7 @@ export default function Home() {
       impact:
         "情報量を増やさずに比較しやすさを高め、採用担当が技術スタックを把握しやすい状態に改善。",
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "Accessibility"],
-      githubLabel: "GitHub: 準備中",
+      githubLabel: "GitHub: 公開準備中",
     },
   ];
 
@@ -68,7 +68,7 @@ export default function Home() {
             AKAO
           </p>
           <p className="text-base font-medium text-slate-700 dark:text-slate-200">
-            エンジニア目指して日々精進中＆就活中
+            エンジニアを目指して、日々学習と就職活動に取り組んでいます。
           </p>
           <p className="max-w-[36ch] text-[15px] leading-8 text-slate-700 [text-wrap:pretty] [word-break:keep-all] dark:text-slate-200 sm:max-w-2xl">
             北欧モダンな雰囲気と、ゆったりした使い心地を大切にしながら、
