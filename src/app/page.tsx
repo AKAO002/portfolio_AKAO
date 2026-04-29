@@ -70,7 +70,7 @@ export default function Home() {
           <p className="text-base font-medium text-slate-700 dark:text-slate-200">
             エンジニアを目指して、日々学習と就職活動に取り組んでいます。
           </p>
-          <p className="max-w-[36ch] text-[15px] leading-8 text-slate-700 [text-wrap:pretty] [word-break:keep-all] dark:text-slate-200 sm:max-w-2xl">
+          <p className="max-w-[36ch] text-[15px] leading-8 text-slate-700 [text-wrap:pretty] break-words whitespace-pre-wrap dark:text-slate-200 sm:max-w-2xl">
             北欧モダンな雰囲気と、ゆったりした使い心地を大切にしながら、
             見る人にやさしい Web サイトを制作しています。
           </p>
@@ -80,7 +80,7 @@ export default function Home() {
           <div className="flex flex-col gap-4.5 sm:gap-5">
             {skillGroups.map((group) => (
               <div key={group.category} className="flex flex-col gap-2.5">
-                <p className="text-[13px] font-semibold uppercase tracking-[0.08em] text-[var(--color-main)]/85 dark:text-blue-300/90">
+                <p className="max-w-full text-[13px] font-semibold uppercase tracking-[0.08em] text-[var(--color-main)]/85 break-words whitespace-pre-wrap dark:text-blue-300/90">
                   {group.category}
                 </p>
                 <div className="flex flex-wrap gap-2.5 sm:gap-3">
@@ -141,7 +141,7 @@ export default function Home() {
         className="mx-auto mt-8 flex w-full max-w-4xl scroll-mt-8 flex-col gap-4 rounded-3xl border border-slate-200/70 bg-white/70 p-8 shadow-[0_20px_60px_-45px_rgba(15,23,42,0.25)] backdrop-blur-sm dark:border-slate-700/80 dark:bg-slate-900/65 dark:shadow-[0_22px_60px_-45px_rgba(2,6,23,0.85)] sm:mt-10 sm:gap-5 sm:p-10"
       >
         <SectionTitle>CONTACT</SectionTitle>
-        <p className="max-w-[36ch] text-[15px] leading-8 text-slate-700 [text-wrap:pretty] [word-break:keep-all] dark:text-slate-200 sm:max-w-2xl">
+        <p className="max-w-[36ch] text-[15px] leading-8 text-slate-700 [text-wrap:pretty] break-words whitespace-pre-wrap dark:text-slate-200 sm:max-w-2xl">
           お仕事のご相談やポートフォリオについてのフィードバックなど、
           お気軽にメッセージをください。折り返しご連絡します。
         </p>

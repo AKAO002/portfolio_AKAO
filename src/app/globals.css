@@ -7,6 +7,8 @@
   --color-sub-strong: #0f766e;
   --color-accent: #fbbf24;
   --color-text: #334155;
+  --theme-transition-duration: 380ms;
+  --theme-transition-ease: cubic-bezier(0.22, 1, 0.36, 1);
 
   --background: var(--color-base);
   --foreground: var(--color-text);
@@ -35,6 +37,30 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   transition:
-    background-color 240ms ease,
-    color 240ms ease;
+    background-color var(--theme-transition-duration)
+      var(--theme-transition-ease),
+    color var(--theme-transition-duration) var(--theme-transition-ease);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body,
+  section,
+  article,
+  a,
+  button,
+  input,
+  textarea,
+  span,
+  p,
+  h1,
+  h2,
+  h3,
+  label {
+    transition:
+      background-color var(--theme-transition-duration)
+        var(--theme-transition-ease),
+      color var(--theme-transition-duration) var(--theme-transition-ease),
+      border-color var(--theme-transition-duration) var(--theme-transition-ease),
+      box-shadow var(--theme-transition-duration) var(--theme-transition-ease);
+  }
 }
