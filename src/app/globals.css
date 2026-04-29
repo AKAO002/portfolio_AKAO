@@ -7,8 +7,8 @@
   --color-sub-strong: #0f766e;
   --color-accent: #fbbf24;
   --color-text: #334155;
-  --theme-transition-duration: 380ms;
-  --theme-transition-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --theme-transition-duration: 500ms;
+  --theme-transition-ease: ease-in-out;
 
   --background: var(--color-base);
   --foreground: var(--color-text);

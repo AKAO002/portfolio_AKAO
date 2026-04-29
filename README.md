@@ -55,4 +55,4 @@ npm run build  # 本番ビルド
 
 ## Live URL
 
-- Production: `TBD (after Vercel deploy)`
+- Production: `https://portfolio-akao.vercel.app`
