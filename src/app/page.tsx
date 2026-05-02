@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionTitle } from "@/components/SectionTitle";
 import { SkillTag } from "@/components/SkillTag";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -61,17 +62,29 @@ export default function Home() {
           <ThemeToggle />
         </div>
 
-        <div className="flex flex-col gap-3 sm:gap-3.5">
-          <p className="text-[2rem] font-semibold leading-tight tracking-tight text-[var(--color-main)]">
-            AKAO
-          </p>
-          <p className="text-base font-medium text-slate-700 dark:text-slate-200">
-            エンジニアを目指して、日々学習と就職活動に取り組んでいます。
-          </p>
-          <p className="max-w-[36ch] text-[15px] leading-8 text-slate-700 [text-wrap:pretty] break-words whitespace-pre-wrap dark:text-slate-200 sm:max-w-2xl">
-            北欧モダンな雰囲気と、ゆったりした使い心地を大切にしながら、
-            見る人にやさしい Web サイトを制作しています。
-          </p>
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-8">
+          <div className="shrink-0">
+            <Image
+              src="/profile.png"
+              alt="AKAO のプロフィール写真"
+              width={128}
+              height={128}
+              className="h-28 w-28 rounded-full object-cover sm:h-32 sm:w-32"
+              priority
+            />
+          </div>
+          <div className="flex min-w-0 flex-1 flex-col gap-3 sm:gap-3.5">
+            <p className="text-[2rem] font-semibold leading-tight tracking-tight text-[var(--color-main)]">
+              AKAO
+            </p>
+            <p className="text-base font-medium text-slate-700 dark:text-slate-200">
+              エンジニアを目指して、日々学習と就職活動に取り組んでいます。
+            </p>
+            <p className="max-w-[36ch] text-[15px] leading-8 text-slate-700 [text-wrap:pretty] break-words whitespace-pre-wrap dark:text-slate-200 sm:max-w-2xl">
+              北欧モダンな雰囲気と、ゆったりした使い心地を大切にしながら、
+              見る人にやさしい Web サイトを制作しています。
+            </p>
+          </div>
         </div>
 
         <div className="flex flex-col gap-5 pt-1.5 sm:gap-6 sm:pt-2">
