@@ -77,6 +77,15 @@ export default function Home() {
             <p className="text-[2rem] font-semibold leading-tight tracking-tight text-[var(--color-main)]">
               AKAO
             </p>
+            <a
+              href="https://x.com/AKAO_IT"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-slate-600 underline-offset-4 transition hover:text-[var(--color-main)] hover:underline dark:text-slate-300 dark:hover:text-blue-300"
+            >
+              <span aria-hidden>𝕏</span>
+              @AKAO_IT
+            </a>
             <p className="text-base font-medium text-slate-700 dark:text-slate-200">
               エンジニアを目指して、日々学習と就職活動に取り組んでいます。
             </p>
